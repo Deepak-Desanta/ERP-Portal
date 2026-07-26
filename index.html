@@ -1,0 +1,132 @@
+
+Index · HTML
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Student Dashboard</title>
+<link rel="stylesheet" href="style.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+ 
+<div class="app">
+ 
+  <!-- Sidebar -->
+  <aside class="sidebar">
+    <div class="sidebar-header">
+      <div class="logo-circle"></div>
+      <div class="college-name">Jeppiaar Engineering College</div>
+    </div>
+ 
+    <nav class="nav-links">
+      <a href="#" class="nav-item active" data-page="dashboard">
+        <span class="nav-icon">🏠</span>
+        <span>Dashboard</span>
+      </a>
+      <a href="#" class="nav-item" data-page="attendance">
+        <span class="nav-icon">📅</span>
+        <span>Attendance</span>
+      </a>
+      <a href="#" class="nav-item" data-page="assessment">
+        <span class="nav-icon">📋</span>
+        <span>Assessment</span>
+      </a>
+      <a href="#" class="nav-item" data-page="profile">
+        <span class="nav-icon">👤</span>
+        <span>Profile</span>
+      </a>
+    </nav>
+ 
+    <div class="sidebar-footer">
+      <a href="#" class="nav-item logout">
+        <span class="nav-icon">↪</span>
+        <span>Logout</span>
+      </a>
+    </div>
+  </aside>
+ 
+  <!-- Main content -->
+  <main class="main">
+ 
+    <header class="top-header">
+      <h1>Student Portal</h1>
+    </header>
+ 
+    <section class="content">
+ 
+      <div class="greeting-row">
+        <div>
+          <h2>Good Morning, <span id="studentName">User</span>! <span class="wave">👋</span></h2>
+          <p class="subtext">Welcome back! Here's your academic overview.</p>
+        </div>
+      </div>
+ 
+      
+      <!-- Stat cards -->
+      <div class="stats-grid">
+ 
+        <div class="stat-card">
+          <div class="icon-badge green">✔</div>
+          <div class="stat-label">Attendance</div>
+          <div class="stat-value">62%</div>
+          <a href="#" class="stat-link green-link">Overall Attendance</a>
+        </div>
+ 
+        <div class="stat-card">
+          <div class="icon-badge orange">🏅</div>
+          <div class="stat-label">Assessment</div>
+          <div class="stat-value">3</div>
+          <a href="#" class="stat-link orange-link">View Details</a>
+        </div>
+ 
+        <div class="stat-card">
+          <div class="icon-badge blue">📖</div>
+          <div class="stat-label">Subjects</div>
+          <div class="stat-value">6</div>
+          <a href="#" class="stat-link blue-link">Enrolled Subjects</a>
+        </div>
+ 
+        <div class="stat-card">
+          <div class="icon-badge purple">⭐</div>
+          <div class="stat-label">CGPA</div>
+          <div class="stat-value">8.5</div>
+          <a href="#" class="stat-link purple-link">View Report</a>
+        </div>
+ 
+      </div>
+ 
+      <!-- Bottom row: Upcoming events + Today's schedule -->
+      <div class="bottom-grid">
+ 
+        <div class="panel events-panel">
+          <div class="panel-header">
+            <h3>Upcoming Events</h3>
+            <a href="#" class="view-all-link">View All</a>
+          </div>
+          <ul class="events-list" id="eventsList">
+            <!-- Populated by script.js -->
+          </ul>
+        </div>
+ 
+        <div class="panel schedule-panel">
+          <div class="panel-header">
+            <h3>Today's Schedule</h3>
+          </div>
+          <ul class="schedule-list" id="scheduleList">
+            <!-- Populated by script.js -->
+          </ul>
+        </div>
+ 
+      </div>
+ 
+    </section>
+  </main>
+</div>
+ 
+<script src="script.js"></script>
+</body>
+</html>
+ 
