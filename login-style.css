@@ -6,7 +6,6 @@
 
 body {
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-  background: #f4f2fb;
   color: #1a1a1a;
 }
 
@@ -14,11 +13,31 @@ body {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  position: relative;
+
+  /* College photo as full-page background */
+  background-image: url("jpr\ putsode.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+/* Dark overlay so the card and text stay readable over the photo */
+.bg-overlay {
+  position: fixed;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(20, 10, 40, 0.55), rgba(20, 10, 40, 0.65));
+  z-index: 0;
 }
 
 /* ---------- Top bar ---------- */
 .top-bar {
   padding: 24px 40px;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  z-index: 1;
 }
 
 .brand {
@@ -42,7 +61,8 @@ body {
 .brand-name {
   font-size: 18px;
   font-weight: 700;
-  color: #1a1a1a;
+  color: #ffffff;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
 }
 
 /* ---------- Login wrapper ---------- */
@@ -52,16 +72,58 @@ body {
   align-items: center;
   justify-content: center;
   padding: 20px;
+  position: relative;
+  z-index: 1;
 }
 
 .login-card {
-  background: #ffffff;
+  /* Glassmorphism / frosted-glass effect */
+  background: rgba(255, 255, 255, 0.18);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.35);
   border-radius: 20px;
   padding: 40px 44px 32px;
   width: 100%;
   max-width: 440px;
-  box-shadow: 0 10px 40px rgba(124, 58, 237, 0.08);
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.25);
   text-align: center;
+}
+
+.login-card h1,
+.card-subtitle,
+.field-label,
+.checkbox-label,
+.footer-text {
+  color: #ffffff;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.25);
+}
+
+.card-subtitle,
+.footer-text {
+  color: rgba(255, 255, 255, 0.85);
+}
+
+select,
+input[type="text"],
+input[type="password"] {
+  background: rgba(255, 255, 255, 0.55);
+  border: 1.5px solid rgba(255, 255, 255, 0.5);
+}
+
+select:focus,
+input:focus {
+  border-color: #ffffff;
+  background: rgba(255, 255, 255, 0.75);
+}
+
+.divider {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.divider::before,
+.divider::after {
+  background: rgba(255, 255, 255, 0.3);
 }
 
 .card-icon {
@@ -96,7 +158,7 @@ form {
   display: block;
   font-size: 13px;
   font-weight: 600;
-  color: #333;
+  color: #ffffff;
   margin: 18px 0 6px;
 }
 
@@ -169,7 +231,7 @@ select {
   display: flex;
   align-items: center;
   gap: 8px;
-  color: #444;
+  color: #ffffff;
   cursor: pointer;
 }
 
@@ -179,7 +241,7 @@ select {
 }
 
 .forgot-link {
-  color: #7c3aed;
+  color: #c4b5fd;
   text-decoration: none;
   font-weight: 600;
 }
@@ -225,11 +287,11 @@ select {
 
 .footer-text {
   font-size: 13.5px;
-  color: #666;
+  color: rgba(255, 255, 255, 0.85);
 }
 
 .footer-text a {
-  color: #7c3aed;
+  color: #c4b5fd;
   font-weight: 600;
   text-decoration: none;
 }

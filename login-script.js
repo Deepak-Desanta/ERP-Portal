@@ -58,7 +58,7 @@ loginForm.addEventListener("submit", (e) => {
   }
 
   // TODO: replace this with a real authentication call (API/backend)
-// TODO: replace this with a real authentication call (API/backend)
+  // TODO: replace this with a real authentication call (API/backend)
   console.log("Login attempt:", { role, identifier, rememberMe });
   window.location.href = "index.html";
 });
