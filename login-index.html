@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Student Portal - Login</title>
+<link rel="stylesheet" href="login-style.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<div class="page">
+
+  <div class="top-bar">
+    <div class="brand">
+      <div class="brand-logo">🎓</div>
+      <span class="brand-name">JEPPIAAR ENGINEERING COLLEGE</span>
+    </div>
+  </div>
+
+  <div class="bg-overlay"></div>
+
+  <div class="login-wrapper">
+    <div class="login-card">
+
+      <!-- Title: Student Portal - Login -->
+
+      <div class="card-icon">🎓</div>
+      <h1>ERP PORTAL</h1>
+      <p class="card-subtitle">Login to access your dashboard</p>
+
+      <form id="loginForm">
+
+        <label class="field-label" for="role">Role</label>
+        <div class="select-wrap">
+          <span class="field-icon">👤</span>
+          <select id="role" name="role" required>
+            <option value="" disabled selected>Select your role</option>
+            <option value="student">Student</option>
+            <option value="faculty">Faculty Member</option>
+            <option value="admin">Administrator</option>
+          </select>
+        </div>
+
+        <label class="field-label" for="identifier" id="identifierLabel">Registration Number</label>
+        <div class="input-wrap">
+          <span class="field-icon">🆔</span>
+          <input type="text" id="identifier" name="identifier" placeholder="Enter your registration number" required>
+        </div>
+
+        <label class="field-label" for="password">Password</label>
+        <div class="input-wrap">
+          <span class="field-icon">🔒</span>
+          <input type="password" id="password" name="password" placeholder="Enter your password" required>
+          <button type="button" id="togglePassword" class="toggle-btn" aria-label="Show password">👁</button>
+        </div>
+
+        <div class="row-between">
+          <label class="checkbox-label">
+            <input type="checkbox" id="rememberMe">
+            <span>Remember me</span>
+          </label>
+          <a href="#" class="forgot-link">Forgot Password?</a>
+        </div>
+
+        <button type="submit" class="login-btn">Login</button>
+
+      </form>
+
+      <div class="divider"><span>or</span></div>
+
+      <p class="footer-text">Don't have an account? <a href="#">Contact Admin</a></p>
+
+    </div>
+  </div>
+
+</div>
+
+<script src="login-script.js"></script>
+</body>
+</html>
